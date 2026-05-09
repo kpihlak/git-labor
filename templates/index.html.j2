@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+>body>
+
+>h1>{{ app_name }}</h1>
+
+<p>{{ server_name }} - {{ app_environment }}</p>
+
+{% if debug_mode %}
+<p>{{ ansible_hostname }} - {{ ansible_distribution }}</p>
+{% endif %}
+
+</body>
+</html>

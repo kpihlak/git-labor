@@ -1,0 +1,17 @@
+- name: Deploy web template
+  hosts: localhost
+  connection: local
+  become: true
+
+  vars:
+    app_name: MinuApp
+    server_name: localhost
+    app_environment: dev
+    debug_mode: true
+
+  tasks:
+    - name: Copy index template
+      template:
+        src: templates/index.html.j2
+        dest: /tmp/index.html
+
